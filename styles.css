@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kaushan+Script&family=Lato:wght@400;700&family=Merienda:wght@400;600;800;900&family=Montserrat:wght@500&family=Nunito+Sans:wght@400;600&family=Open+Sans&family=Poppins:wght@500&family=Raleway:wght@300;400;500;600;700;800;900&family=Source+Serif+Pro&family=Ubuntu:wght@500&display=swap");
+
+/* font-family: 'Josefin Sans', sans-serif;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Merienda', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Source Serif Pro', serif;
+font-family: 'Ubuntu', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-text-color: gray;
+  --secondary-text-color: black;
+  --third-text-color: white;
+  --primary-background-color: burlywood;
+}
+
+body {
+  width: 100%;
+  font-family: "Nunito Sans", sans-serif;
+  overflow-y: hidden;
+}
+
+nav {
+  width: 100%;
+  background-color: var(--third-text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.189);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 100px;
+}
+
+.logoImage {
+  width: 100%;
+  height: 100%;
+}
+
+.navLinks {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin-right: 100px;
+}
+
+/* .navLinks li {
+  margin: 0px 20px;
+} */
+
+.navLinks li a {
+  text-decoration: none;
+  color: var(--secondary-text-color);
+}
+
+.navLinks li a:hover {
+  text-decoration: underline;
+}
+
+.toggleButtons {
+  display: none;
+}
+
+.menuButton {
+  display: none;
+  font-size: 20px;
+  margin-right: 50px;
+}
+
+.closeButton {
+  display: none;
+  font-size: 20px;
+  margin-right: 50px;
+}
+
+i {
+  cursor: pointer;
+}
+
+/* media queries */
+
+/* media query for screen size less than 1000px */
+
+@media (max-width: 1000px) {
+  .logo {
+    margin-left: 50px;
+  }
+
+  .navLinks {
+    width: 60%;
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 750px) {
+  .logo {
+    margin-left: 50px;
+  }
+
+  .navLinks {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--primary-background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: start;
+    height: 100vh;
+    width: 50%;
+    margin-right: 0px;
+    padding: 80px 0px 80% 50px;
+    transform: translateX(150%);
+    transition: all 0.2s ease;
+  }
+
+  .navLinks li {
+    margin: 15px 0;
+  }
+
+  .navLinks li a {
+    color: var(--secondary-text-color);
+  }
+  .toggleButtons {
+    display: flex;
+  }
+
+  .menuButton {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .closeButton {
+    /* display: flex; */
+    position: absolute;
+    top: 25px;
+    right: 0px;
+    /* z-index: 10; */
+  }
+
+  .navLinks.showNavLinks {
+    transform: translateX(0);
+  }
+  /* 
+  .navLinks.showNavLinks .menuButton {
+    display: none;
+  } */
+}
+
+/* media queries for screen size less than 450px */
+
+@media (max-width: 450px) {
+  .navLinks {
+    width: 70%;
+    padding-bottom: 70%;
+  }
+
+  .navLinks li {
+    margin: 0px;
+  }
+}
+
+/* ------------------------------------------------------ */
+
+.heroSection {
+  width: 100%;
+  height: 98vh;
+  background: linear-gradient(90deg, var(--third-text-color), transparent 70%),
+    url("images/home-bg.jpg");
+  /* background-image: url("images/home-bg.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.heroSectionContent {
+  width: 40%;
+  margin-left: 100px;
+}
+
+.heroSectionContent > * {
+  margin: 20px 0;
+}
+
+.heroSectionHeader h1 {
+  font-family: "Merienda", cursive;
+  font-size: 60px;
+  text-align: center;
+}
+
+.heroSectionBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroSectionBody p {
+  font-size: 17px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 2;
+}
+
+.heroSectionBody .heroSectionButton {
+  width: 100px;
+  height: 40px;
+  outline: none;
+  border: 0;
+  background-color: var(--primary-background-color);
+  color: var(--third-text-color);
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.heroSectionBody .heroSectionButton:hover {
+  background-color: var(--secondary-text-color);
+}
+
+.heroSectionButton a {
+  text-decoration: none;
+  color: var(--third-text-color);
+}
+
+/* media queries for screen size less than 750px */
+
+@media (max-width: 750px) {
+  .heroSectionContent {
+    width: 60%;
+    margin-left: 20px;
+  }
+}
