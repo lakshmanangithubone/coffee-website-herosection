@@ -251,4 +251,8 @@ i {
     width: 60%;
     margin-left: 20px;
   }
+
+  .heroSectionHeader h1 {
+    font-size: 40px;
+  }
 }
