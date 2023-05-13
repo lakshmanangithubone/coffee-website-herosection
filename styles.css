@@ -1,11 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kaushan+Script&family=Lato:wght@400;700&family=Merienda:wght@400;600;800;900&family=Montserrat:wght@500&family=Nunito+Sans:wght@400;600&family=Open+Sans&family=Poppins:wght@500&family=Raleway:wght@300;400;500;600;700;800;900&family=Source+Serif+Pro&family=Ubuntu:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kaushan+Script&family=Lato:wght@400;700&family=Montserrat:wght@500&family=Open+Sans&family=Poppins:wght@500&family=Raleway:wght@300;400;500;600;700;800;900&family=Source+Serif+Pro&family=Ubuntu:wght@500&display=swap");
 
 /* font-family: 'Josefin Sans', sans-serif;
 font-family: 'Kaushan Script', cursive;
 font-family: 'Lato', sans-serif;
-font-family: 'Merienda', cursive;
 font-family: 'Montserrat', sans-serif;
-font-family: 'Nunito Sans', sans-serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'Raleway', sans-serif;
@@ -21,23 +19,19 @@ font-family: 'Ubuntu', sans-serif; */
 :root {
   --primary-text-color: gray;
   --secondary-text-color: black;
-  --third-text-color: white;
-  --primary-background-color: burlywood;
 }
 
 body {
   width: 100%;
-  font-family: "Nunito Sans", sans-serif;
-  overflow-y: hidden;
+  font-family: "Montserrat", sans-serif;
 }
 
 nav {
   width: 100%;
-  background-color: var(--third-text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 10px 0;
   position: sticky;
   top: 0;
   left: 0;
@@ -99,9 +93,17 @@ i {
 
 /* media queries */
 
-/* media query for screen size less than 1000px */
+/* media query for screen size less than 1200px */
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
+  .navLinks {
+    width: 50%;
+  }
+}
+
+/* media query for screen size less than 992px */
+
+@media (max-width: 992px) {
   .logo {
     margin-left: 50px;
   }
@@ -112,7 +114,9 @@ i {
   }
 }
 
-@media (max-width: 750px) {
+/* media query for screen size less than 768px */
+
+@media (max-width: 768px) {
   .logo {
     margin-left: 50px;
   }
@@ -121,7 +125,7 @@ i {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: var(--primary-background-color);
+    background-color: burlywood;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,15 +165,11 @@ i {
   .navLinks.showNavLinks {
     transform: translateX(0);
   }
-  /* 
-  .navLinks.showNavLinks .menuButton {
-    display: none;
-  } */
 }
 
-/* media queries for screen size less than 450px */
+/* media queries for screen size less than 576px */
 
-@media (max-width: 450px) {
+@media (max-width: 576px) {
   .navLinks {
     width: 70%;
     padding-bottom: 70%;
@@ -244,9 +244,9 @@ i {
   color: var(--third-text-color);
 }
 
-/* media queries for screen size less than 750px */
+/* media queries for screen size less than 768px */
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .heroSectionContent {
     width: 60%;
     margin-left: 20px;
